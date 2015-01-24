@@ -1,0 +1,75 @@
+/*
+  ____  _   _ _____ _____ ___  _   _ ____  
+ | __ )| | | |_   _|_   _/ _ \| \ | / ___| 
+ |  _ \| | | | | |   | || | | |  \| \___ \ 
+ | |_) | |_| | | |   | || |_| | |\  |___) |
+ |____/ \___/  |_|   |_| \___/|_| \_|____/ 
+                                                                                                                                                                                                                                              
+*/
+
+@import 'vars';
+
+// ####################### BEGIN BUTTONS CSS ####################### //
+
+
+.scrolltotop-button {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	display: none;
+	background-color: $color-4;
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+
+	@include mq (sm) {
+		width: 100%;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		margin-top: 0px;
+	}
+
+	&:hover {
+		background-color: darken($color-4, 15%);
+	}
+}
+
+.view-button {
+	background-color: $color-4;
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+
+	@include mq (sm) {
+		width: 100%;
+	}
+
+	&:hover {
+		background-color: darken($color-4, 15%);
+	}
+}
+
+.send-button {
+	background-color: $color-4;
+	color: $white;
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: darken($color-4, 15%);
+	}
+}
+
+.cancel-button {
+	background-color: #bbb;
+	color: $white;
+	padding: 10px 20px 10px 20px;
+	margin-top: 10px;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: darken(#bbb, 15%);
+	}
+}
+
+// ####################### END BUTTONS ####################### //

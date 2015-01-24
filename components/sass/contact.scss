@@ -1,0 +1,76 @@
+/*
+   ____ ___  _   _ _____  _    ____ _____ 
+  / ___/ _ \| \ | |_   _|/ \  / ___|_   _|
+ | |  | | | |  \| | | | / _ \| |     | |  
+ | |__| |_| | |\  | | |/ ___ \ |___  | |  
+  \____\___/|_| \_| |_/_/   \_\____| |_|  
+  
+*/
+
+
+@import 'vars';
+
+// ####################### BEGIN CONTACT SECTION CSS ####################### //
+
+.contact-body {
+	min-height: 200px;
+	padding: 0px 50px 50px 30px;
+	background-color: $white;
+
+	@include mq (sm) {
+		padding: 0px 20px 50px 20px;
+	}
+
+	.contact-inner {
+
+		.contact-inner-left {
+			float: left;
+			width: 40%;
+
+			@include mq (md) {
+				width: 100%;
+				margin-top: 30px;
+			}
+
+			@include mq (sm) {
+				width: 100%;
+				margin-top: 30px;
+			}
+
+			.contact-info {
+				margin-top: 20px;
+
+				span {
+					font-weight: bold;
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		.contact-inner-right {
+			float: left;
+			width: 60%;
+			padding: 0px 50px 0px 50px;
+			margin-top: -80px;
+
+			@include mq (md) {
+				width: 100%;
+				margin-top: 0px;
+			}
+
+			@include mq (sm) {
+				width: 100%;
+				margin-top: 0px;
+				padding: 0px 10px 0px 10px;
+			}
+		}
+
+		.google-map {
+			padding: 0px 20px 0px 20px;
+		}
+
+		.contact-form {
+			margin-top: 10px;
+		}
+	}
+}

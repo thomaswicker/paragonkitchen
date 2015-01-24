@@ -1,0 +1,159 @@
+/*
+     _    ____   ___  _   _ _____ 
+    / \  | __ ) / _ \| | | |_   _|
+   / _ \ |  _ \| | | | | | | | |  
+  / ___ \| |_) | |_| | |_| | | |  
+ /_/   \_\____/ \___/ \___/  |_|  
+                                                                                                                                                                                                                                      
+*/
+
+@import 'vars';
+
+// ####################### BEGIN ABOUT SECTION CSS ####################### //
+
+.contact-me-box {
+	width: 100%;
+	text-align: center;
+
+	@include mq(sm) {
+		background-color: #eee;
+		color: $white;
+		padding: 10px 0px 5px 0px;
+	}
+
+	.contact-tape {
+		text-align: center;
+
+		img {
+			margin-top: -34px;
+
+		}
+	}
+	
+	h4 {
+		padding-left: 30px;
+	}
+
+	button {
+		background-color: $color-4;
+		margin-left: 20px;
+		text-transform: uppercase;
+		padding: 10px 20px 10px 20px;
+		margin-left: 30px;
+
+		&:hover {
+			background-color: darken($color-4, 15%);
+		}
+	}
+}
+
+.about-body {
+	@include flex();
+	padding: 0px 0px 40px 0px;
+	background-color: $white;
+	background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/sketch_veges_beet.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 40%;
+
+	.about-body-left {
+		width: 25%;
+		padding: 30px 0px 0px 70px;
+
+		img {
+			width: 100%;
+		}
+
+		@include mq(xl) {
+			width: 25%;
+		}
+
+		@include mq(lg) {
+			width: 30%;
+		}
+
+		@include mq(md) {
+			width: 45%;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+			padding: 30px 0px 30px 0px;
+			text-align: center;
+		}
+
+		img {
+			max-width: 360px;
+		}
+	}
+
+	.about-body-right {
+		width: 75%;
+		padding: 60px 130px 0px 30px;
+
+		@include mq(xl) {
+			width: 70%;
+			padding: 60px 130px 0px 60px;
+		}
+
+		@include mq(lg) {
+			width: 65%;
+			padding: 60px 100px 0px 90px;
+		}
+
+		@include mq(md) {
+			width: 55%;
+			padding: 60px 50px 0px 20px;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+			padding: 30px 50px 0px 50px;
+		}
+
+		h4 {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		span {
+			padding: 0px;
+			margin: 0px;
+		}
+	}
+}
+
+.chef-name {
+	color: $color-1;
+	font-family: $font-2;
+	font-weight: 300;
+	font-size: 2.2rem;
+	height: 10px;
+
+	@include mq(md) {
+
+	}
+
+	@include mq(sm) {
+		font-size: 2.4rem;
+		color: #222;
+		height: 8px;
+	}
+}
+
+.chef-title {
+	color: $charcoal;
+	font-family: $font-1;
+	font-weight: 600;
+	font-size: 1rem;
+
+	@include mq(md) {
+
+	}
+
+	@include mq(sm) {
+		font-size: 1.1rem;
+		font-weight: 300;
+		color: #222;
+	}	
+}

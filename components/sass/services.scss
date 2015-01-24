@@ -1,0 +1,172 @@
+/*
+  ____  _____ ______     _____ ____ _____ ____  
+ / ___|| ____|  _ \ \   / /_ _/ ___| ____/ ___| 
+ \___ \|  _| | |_) \ \ / / | | |   |  _| \___ \ 
+  ___) | |___|  _ < \ V /  | | |___| |___ ___) |
+ |____/|_____|_| \_\ \_/  |___\____|_____|____/ 
+                                                                                                                                                                                                                                                                                                                                             
+*/
+
+@import 'vars';
+
+// ####################### BEGIN SERVICES SECTION CSS ####################### //
+
+.services-checkers {
+	float: left;
+	width: 100%;
+	height: 50px;
+	background-color: $white;
+	background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/checker-border.png");
+	background-repeat: repeat-x;
+}
+
+.services-body {
+	min-height: 200px;
+	background-color: $color-0;
+	padding: 0px 50px 50px 30px;
+	margin-top: -12px;
+
+	@include mq (sm) {
+		padding: 0px 40px 50px 20px;
+	}
+
+	.services-inner {
+		margin-top: 120px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 98%;	
+
+		ul {
+			list-style: disc;
+			padding: 20px 0px 20px 0px;
+		}
+	}
+
+	// ####################### ACCORDION CSS #######################
+
+	article.accordion {
+		width: 100%;
+	  margin: 0 auto;
+	  border: 4px solid $white;
+	}
+
+	header.accordion-header {  
+	  cursor: pointer;
+	  background: #ddd;
+	  padding: 5px 5px 5px 5px;
+	  color: #fff;
+	  border-bottom: 2px solid #fff;
+		transition: background .5s ease-in-out;
+		-moz-transition: background .5s ease-in-out;
+		-webkit-transition: background .5s ease-in-out;
+
+		h3 {
+	  	color: #333;
+			font-size: 1.2rem;
+			padding: 0em 0em 0em 1em;
+			font-family: $font-1;
+			font-weight: 400;
+		}
+	}
+
+	.accordion-selected {
+	  background-color: $color-5 !important;
+	  z-index: 1000;
+	  color: #fff;
+
+	  h3 {
+	  	color: $white !important;
+	  }
+	}
+
+	.accordion-content {
+		float: left;
+	  display: none;
+	  width: 100%;
+	  background-color: $white !important;
+	  margin-bottom: 10px;
+	 	color: #333;
+	}
+
+	.panel-left {
+		float: left;
+		width: 20%;
+		text-align: center;
+		padding: 40px 40px 50px 50px;
+
+		@include mq (lg) {
+			width: 30%;
+		}
+
+		@include mq (md) {
+			width: 100%;
+			padding: 30px 0px 0px 0px;
+		}
+
+		@include mq (sm) {
+			width: 100%;
+			padding: 30px 0px 0px 0px;
+		}
+
+		img {
+			width: 100%;
+			max-width: 300px;
+			background-color: $white;
+			padding: 1em;
+			-moz-box-shadow: 3px 3px 4px #444;
+			-webkit-box-shadow: 3px 3px 4px #444;
+			box-shadow: 0px 0px 8px #444;
+
+			@include mq (lg) {
+				padding: .8em;
+			}
+
+			@include mq (md) {
+				padding: 1em;
+			}
+
+			@include mq (sm) {
+				padding: 1em;
+			}
+		}
+	}
+
+	.panel-right {
+		float: left;
+		width: 80%;
+		padding: 20px 80px 20px 50px;
+		border-left: 2px solid #eeeeee;
+		height: 100%;
+
+		@include mq (lg) {
+			width: 70%;
+		}
+
+		@include mq (md) {
+			width: 100%;
+			padding: 2.2em 2.2em 2.2em 2.2em;
+			border-left: none;
+		}
+
+		@include mq (sm) {
+			width: 100%;
+			padding: 2.2em 2.2em 2.2em 2.2em;
+			border-left: none;
+		}
+
+		h4 {
+			font-weight: bold;
+			font-size: 2.6rem;
+			font-family: $font-2;
+
+
+			@include mq (md) {
+				font-size: 2.2rem;
+			}
+
+			@include mq (sm) {
+				font-size: 2rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "paragon",
+  "version": "0.0.0",
+  "authors": [
+    "Thomas Wicker <design@thomaswicker.com>"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

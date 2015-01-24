@@ -1,0 +1,161 @@
+/*
+     _    ____  ____  _     ___ ____    _  _____ ___ ___  _   _ 
+    / \  |  _ \|  _ \| |   |_ _/ ___|  / \|_   _|_ _/ _ \| \ | |
+   / _ \ | |_) | |_) | |    | | |     / _ \ | |  | | | | |  \| |
+  / ___ \|  __/|  __/| |___ | | |___ / ___ \| |  | | |_| | |\  |
+ /_/   \_\_|   |_|   |_____|___\____/_/   \_\_| |___\___/|_| \_|
+                                                                                                                                                                                                      
+*/
+
+// ############### TOP LEVEL PARTIAL IMPORTS ############### //
+
+@import 'vars';
+@import 'foundation_and_overrides';
+@import 'superhero';
+@import 'buttons';
+
+
+html, body {
+	background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/superhero_stripe.jpg");
+	background-repeat: repeat;
+	background-color: $color-1;
+	overflow-x: hidden;
+}
+
+.body-main {
+	min-height: 400px;
+	background-color: $white;
+}
+
+.name a img {
+	max-width: 175px;
+	position: absolute;
+	top: 4px;
+	left: 30px;
+
+	@include mq (sm) {
+		width: 125px;
+		position: absolute;
+		top: 2px;
+		left: 20px;		
+	}
+}
+
+#name_large {
+	display: block;
+
+	@include mq (md) {
+		display: block;
+	}
+
+	@include mq (sm) {
+		display: none;
+	}
+}
+
+#name_small {
+	display: block;
+
+	@include mq (md) {
+		display: none;
+	}
+
+	@include mq (sm) {
+		display: block;
+	}
+}
+
+h1 {
+	font-family: $font-2;
+	font-weight: 300;
+	font-size: 2.3rem;
+
+	@include mq(md) {
+
+	}
+
+	@include mq(sm) {
+		font-size: 1.9rem;
+	}
+}
+
+h2.page-header {
+	width: auto;
+	max-width: 300px;
+	background-color: darken($color-2, 10%);
+	color: $white;
+	font-family: $font-2;
+	font-weight: 300;
+	font-size: 1.8rem;
+	padding: 5px 30px 5px 30px;
+	margin: 40px 0px 30px 0px;
+	text-align: center;
+
+	@include mq(md) {
+
+	}
+
+	@include mq(sm) {
+		width: 100%;
+		max-width: none;
+		margin: 40px 0px 0px 0px;
+	}
+}
+
+blockquote {
+	font-size: 1.4rem;
+	color: $color-2;
+	border-left: 3px solid orange;
+
+	@include mq(md) {
+
+	}
+
+	@include mq(sm) {
+		font-size: 1.2rem;
+	}
+}
+
+// ############### PARTIAL IMPORT ############### //
+@import 'about';
+
+// ############### PARTIAL IMPORT ############### //
+@import 'calendar';
+
+// ############### PARTIAL IMPORT ############### //
+@import 'classes';
+
+// ############### PARTIAL IMPORT ############### //
+@import 'services';
+
+// ############### PARTIAL IMPORT ############### //
+@import 'contact';
+
+
+.nav_elements {
+	color: white !important;
+
+	@include mq (sm) {
+		padding: 0px !important;
+		padding-top: 1em !important;
+		padding-bottom: 1em !important;
+	}
+}
+
+
+.nav_elements a {
+	color: white !important;
+	
+	@include mq (sm) {
+		padding: 0px !important;
+	}
+}
+
+.footer {
+	background-color: $black;
+	color: $white;
+	font-size: .9rem;
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+}
+  

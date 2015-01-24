@@ -1,0 +1,167 @@
+/*
+   ____    _    _     _____ _   _ ____    _    ____  
+  / ___|  / \  | |   | ____| \ | |  _ \  / \  |  _ \ 
+ | |     / _ \ | |   |  _| |  \| | | | |/ _ \ | |_) |
+ | |___ / ___ \| |___| |___| |\  | |_| / ___ \|  _ < 
+  \____/_/   \_\_____|_____|_| \_|____/_/   \_\_| \_\
+                                                                                                                                                                                                                                                                                                 
+*/
+
+@import 'vars';
+
+// ####################### BEGIN BUTTONS ####################### //
+
+.calendar-card {
+	float: left;
+	width: 100%;
+	background-color: $white;
+	padding: 20px 90px 20px 20px;
+	-moz-box-shadow: 3px 3px 4px #444;
+	-webkit-box-shadow: 3px 3px 4px #444;
+	box-shadow: 0px 0px 8px #444;
+	margin-top: 1.5em;
+
+	@include mq (md) {
+		padding: 20px 30px 20px 20px;
+	}
+
+	@include mq (sm) {
+		padding: 30px 0px 0px 0px;
+	}
+
+	.calendar-card-header {
+		float: left;
+		padding: 1em 0em .5em 0em;
+ 		word-break: break-all;
+    white-space: normal;
+		word-wrap: initial;
+		font-family: $font-1;
+		font-weight: 400;
+		font-size: 1.9rem;
+		line-height: 1.2em;
+		color: $color-2;
+
+		@include mq(md) {
+			width: 100%;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+			font-size: 1.4rem;
+			line-height: 1.2em;
+			margin-top: .5em;
+		}
+	}
+
+	.calendar-card-text {
+		float: left;
+		height: auto;
+		max-width: 90%;
+		padding: 0em 0em .85em 0em;
+		margin-bottom: .6em;
+ 		word-break: break-all;
+    white-space: normal;	
+
+    p {
+    	font-family: $font-1;
+			font-size: 1.1rem;
+			line-height: 1.3rem;
+    }
+  }
+
+	.calendar-card-date {
+		background-color: darken($color-5, 5%);
+		color: $white;
+		position: absolute;
+		top: 40px;
+		right: 2px;
+		text-align: right;
+		padding: .5em 1em .5em 1em;
+		font-weight: 400;
+		font-family: $font-1;
+		border: 2px solid $white;
+ 		word-break: break-all;
+    white-space: normal;
+
+		@include mq (sm) {
+			float: left;
+			width: 100%;
+			background-color: $white;
+			color: darken($color-5, 10%);
+			position: relative;
+			text-align: left;
+			padding: 0em;
+			font-weight: 400;
+			font-family: $font-1;
+			border: none;
+			top: 0px;
+			right: 0px;
+			margin-bottom: .9em;
+		}
+	}
+
+	.active-nav {
+		background: transparent;
+		background-color: red !important;
+		color: $white !important;
+	}
+}
+
+.calendar-card-left {
+			float: left;
+	width: 20%;
+	text-align: center;
+
+	@include mq(md) {
+		width: 100%;
+	}
+
+	@include mq(sm) {
+		width: 100%;
+	}
+}
+
+.calendar-card-center {
+	float: left;
+	width: 70%;
+	padding: 0px 0px 0px 30px;
+
+	@include mq(md) {
+		width: 100%;
+	}
+
+	@include mq(sm) {
+		width: 100%;
+			padding-right: 40px;
+	}
+}
+
+.calendar-card-right {
+	float: left;
+	width: 10%;
+	font-size: 3rem;
+	font-family: $font-1;
+	text-align: center;
+
+	@include mq(md) {
+		width: 100%;
+	}
+
+	@include mq(sm) {
+		width: 100%;
+	}
+}
+
+.calendar-card-photo {
+	img {
+		width: 100%;
+		max-width: 300px;
+
+		@include mq(md) {
+			max-width: 1200px;
+		}
+
+		@include mq(sm) {
+		}
+	}
+}
