@@ -68,6 +68,12 @@
   background-image: url("../img/superhero_stripe.jpg");
   background-repeat: repeat;
   background-color: transparent;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+  height: 55px;
 }
 @media only screen and (max-width: 40em) {
   .top-bar {
@@ -90,7 +96,7 @@
 }
 .top-bar-section ul li {
   background-color: transparent !important;
-  margin-top: 16px;
+  margin-top: 12px;
   padding: 0px;
 }
 @media only screen and (max-width: 40em) {
@@ -173,7 +179,7 @@
   width: 97%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2em;
+  margin-top: 4em;
   padding: .5em;
   background-color: #ffffff;
   box-shadow: 0px 0px 8px #444;
@@ -295,45 +301,17 @@ html, body {
 }
 
 .name a img {
-  max-width: 175px;
+  max-width: 150px;
   position: absolute;
   top: 4px;
-  left: 30px;
+  left: 20px;
 }
 @media only screen and (max-width: 40em) {
   .name a img {
-    width: 125px;
+    width: 145px;
     position: absolute;
-    top: 2px;
-    left: 20px;
-  }
-}
-
-#name_large {
-  display: block;
-}
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  #name_large {
-    display: block;
-  }
-}
-@media only screen and (max-width: 40em) {
-  #name_large {
-    display: none;
-  }
-}
-
-#name_small {
-  display: block;
-}
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  #name_small {
-    display: none;
-  }
-}
-@media only screen and (max-width: 40em) {
-  #name_small {
-    display: block;
+    top: 4px;
+    left: 12px;
   }
 }
 
@@ -377,13 +355,6 @@ blockquote {
   blockquote {
     font-size: 1.2rem;
   }
-}
-
-.fixed {
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
 }
 
 /*
@@ -1088,6 +1059,14 @@ div.wpcf7-validation-errors {
 
 .nav_elements a {
   color: white !important;
+}
+.nav_elements a:hover {
+  color: #333 !important;
+}
+@media only screen and (max-width: 40em) {
+  .nav_elements a:hover {
+    color: #fff !important;
+  }
 }
 @media only screen and (max-width: 40em) {
   .nav_elements a {

@@ -67,6 +67,7 @@ $(document).foundation({
   }
 });
 
+
 var t = $(".superhero-inside").offset().top;
 
 $(window).scroll(function(){

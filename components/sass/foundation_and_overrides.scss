@@ -35,6 +35,12 @@ $topbar-sticky-class: ".sticky";
 	background-image: url("../img/superhero_stripe.jpg");
 	background-repeat: repeat;
 	background-color: transparent;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+  height: 55px;
 
 	@include mq(sm) {
 		background-color: #333 !important;
@@ -43,7 +49,6 @@ $topbar-sticky-class: ".sticky";
 }
 
 .top-bar-section {
-
 	@include mq(sm) {
 		margin-top: 10px;
 		background-color: #00616D !important;
@@ -58,7 +63,7 @@ $topbar-sticky-class: ".sticky";
 
 	ul li {
 		background-color: transparent !important;
-		margin-top: 16px;
+		margin-top: 12px;
 		padding: 0px;
 
 		@include mq(sm) {

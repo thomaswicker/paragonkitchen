@@ -28,40 +28,16 @@ html, body {
 }
 
 .name a img {
-	max-width: 175px;
+	max-width: 150px;
 	position: absolute;
 	top: 4px;
-	left: 30px;
+	left: 20px;
 
 	@include mq (sm) {
-		width: 125px;
+		width: 145px;
 		position: absolute;
-		top: 2px;
-		left: 20px;		
-	}
-}
-
-#name_large {
-	display: block;
-
-	@include mq (md) {
-		display: block;
-	}
-
-	@include mq (sm) {
-		display: none;
-	}
-}
-
-#name_small {
-	display: block;
-
-	@include mq (md) {
-		display: none;
-	}
-
-	@include mq (sm) {
-		display: block;
+		top: 4px;
+		left: 12px;		
 	}
 }
 
@@ -116,13 +92,6 @@ blockquote {
 	}
 }
 
-.fixed {
-	width: 100%;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-}
-
 // ############### PARTIAL IMPORT ############### //
 @import 'about';
 
@@ -142,6 +111,11 @@ blockquote {
 
 }
 
+#logo-large {
+
+}
+
+
 .nav_elements {
 	color: white !important;
 
@@ -152,10 +126,17 @@ blockquote {
 	}
 }
 
-
 .nav_elements a {
 	color: white !important;
 	
+	&:hover {
+		color: #333 !important;
+
+		@include mq (sm) {
+			color: #fff !important;
+		}
+	}
+
 	@include mq (sm) {
 		padding: 0px !important;
 	}

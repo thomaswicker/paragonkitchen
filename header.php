@@ -42,7 +42,7 @@
 		<!-- Ancient Scrolls -->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/bower_components/foundation/css/foundation.css">
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/application.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
 </head>
 
 <body <?php body_class(); ?>>
@@ -52,11 +52,12 @@
 
 	<section class="superhero medium-12 ">
 		
-			<nav class="top-bar navforfixed" data-topbar role="navigation">
+			<nav class="top-bar" data-topbar role="navigation">
 
 			  <ul class="title-area">
 			    <li class="name">
-			      <a href="#backtotop"><img src="<?php bloginfo( 'template_directory' ); ?>/img/logo.png"></a>
+			      <a href="#backtotop" class="show-for-medium-up"><img src="<?php bloginfo( 'template_directory' ); ?>/img/logo.png"></a>
+			      <a href="#backtotop" class="show-for-small-only"><img src="<?php bloginfo( 'template_directory' ); ?>/img/logo_white.png"></a>
 			    </li>
 			    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 			  </ul><!-- /.title-area -->
@@ -73,7 +74,7 @@
 			  </section><!-- /.top-bar-section -->
 			</nav><!-- /.top-bar -->
 
-		<section id="superhero" class="superhero-inside medium-12">
+		<section class="superhero-inside medium-12">
 			<ul class="example-orbit" data-orbit>
 
 				<?php
