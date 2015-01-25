@@ -74,3 +74,22 @@
 		}
 	}
 }
+
+.wpcf7-response-output {
+	margin: 0px !important;
+	padding: .5em 1em .5em 1em;
+}
+
+div.wpcf7-mail-sent-ok {
+	border: 0px;
+	border: none !important;
+	background-color: #AAC750;
+	color: $white;
+}
+
+div.wpcf7-validation-errors {
+	border: 0px;
+	border: none !important;
+	background-color: #A60F1B;
+	color: $white;
+}

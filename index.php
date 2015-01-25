@@ -14,18 +14,33 @@
 	</aside><!-- /.about-body-left -->
 
 	<div class="about-body-right medium-9 columns">
-		<h1>Welcome to the Paragon Kitchen</h1>
+	
+		<?php
+			$args = array(
+				'post_type' => 'about',
+				'posts_per_page' => 1
+				);
 
-		<blockquote>
-			The word Paragon literally translates to perfect, very best, or excellent. My philosophy is to have the very best kitchen, and by “kitchen” I mean culinary skills and techniques to create the very best meals for my clients. 
-		</blockquote>
-		<p>
-			The Paragon Kitchen is a small private chef service, because I want to retain a personal relationship with my clients and cater to your special needs and styles. Every event, whether big or small is unique so together we put together the perfect menu and then I make it easy by coming to your location and I provide all of the necessary services to create a delicious, gourmet event that everyone will enjoy!</br></br>
+			$the_query = new WP_Query( $args );
 
-			Interested in taking one of our classes? Class menus and descriptions can be found under the “Calendar” and “Classes” tabs above. You can email or call me directly to register for an upcoming class. If you have any suggestions or comments, I would love to hear them. Or if there’s a class you can’t wait for us to offer, please don’t hesitate to email me.</br></br>
+			?>
 
-			Hope to see you soon!</br></br>
-		</p>
+			<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+			
+			<h1><?php the_field( 'about_header' ); ?></h1>
+
+			<blockquote>
+				<?php the_field( 'about_blockquote' ); ?> 
+			</blockquote>
+			<p>
+				<?php the_field( 'about_body_text' ); ?></br></br>
+			</p>
+
+		<?php endwhile; else: ?>
+
+			<p>There are no posts or pages here</p>
+
+		<?php endif; ?>
 
 	</div><!-- /.about-body-right -->	
 
@@ -56,7 +71,7 @@
 
 			<?php
 			$args = array(
-				'post_type' => 'classes',
+				'post_type' => 'events',
 				'order' => 'ASC',
 				'posts_per_page' => 8
 				);
@@ -66,6 +81,7 @@
 			?>
 
 			<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
 				<section class="calendar-card-container medium-12 columns">
 
 					<div class="calendar-card">
@@ -126,43 +142,82 @@
 
 		<div class="medium-12 large-4 ourclasses-list columns">
 			<ul>
-				<li>French Classes</li>
-				<li>Comfort Food Classics</li>
-				<li>Essentials I and II</li>
-				<li>Italian Classics</li>
-				<li>Fresh Sausage Making</li>
-				<li>Let's Get Grilling</li>
-				<li>Mother Sauces</li>
-				<li>Mexican Street Tacos</li>
-				<li>Seafood 101</li>
+				<?php
+				$args = array(
+				'post_type' => 'classes-column-1',
+				'order' => 'ASC',
+				'posts_per_page' => 8					)
+
+				;
+
+				$the_query = new WP_Query( $args );
+
+				?>
+
+				<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+				<li><?php the_field( 'class_name_for_column_1' ); ?></li>
+
+				<?php endwhile; else: ?>
+
+				<p>There are no posts or pages here</p>
+
+				<?php endif; ?>
 			</ul>
+			
+		</div><!-- /.medium-6 columns -->
+
+		<div class="medium-12 large-4 ourclasses-list columns">
+
+			<ul>
+					<?php
+					$args = array(
+					'post_type' => 'classes-column-2',
+					'order' => 'ASC',
+					'posts_per_page' => 8					)
+
+					;
+
+					$the_query = new WP_Query( $args );
+
+					?>
+
+					<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+					<li><?php the_field( 'class_name_for_column_2' ); ?></li>
+
+					<?php endwhile; else: ?>
+
+					<p>There are no posts or pages here</p>
+
+					<?php endif; ?>
+				</ul>
+
 		</div><!-- /.medium-6 columns -->
 
 		<div class="medium-12 large-4 ourclasses-list columns">
 			<ul>
-				<li>Knife Skills</li>
-				<li>Brunch Munch</li>
-				<li>Wood Fired Pizza</li>
-				<li>All Things Pumpkin</li>
-				<li>Cullinary Date Night</li>
-				<li>Pork... It's What's for Dinner</li>
-				<li>Mommy Boot Camp</li>
-				<li>Bountiful Harvest</li>
-				<li>Homemade Ice Cream</li>
-			</ul>
-		</div><!-- /.medium-6 columns -->
+				<?php
+				$args = array(
+				'post_type' => 'classes-column-3',
+				'order' => 'ASC',
+				'posts_per_page' => 8					)
 
-		<div class="medium-12 large-4 ourclasses-list columns">
-			<ul>
-				<li>Food and Wine Pairing</li>
-				<li>World Taste Germany</li>
-				<li>Taste of Thai</li>
-				<li>New Orleans Style</li>
-				<li>The Art of Entertaining</li>
-				<li>Artisan Bread Making</li>
-				<li>Holiday Candy</li>
-				<li>So Many Salads</li>
-				<li>Farm to Table</li>
+				;
+
+				$the_query = new WP_Query( $args );
+
+				?>
+
+				<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+				<li><?php the_field( 'class_name_for_column_3' ); ?></li>
+
+				<?php endwhile; else: ?>
+
+				<p>There are no posts or pages here</p>
+
+				<?php endif; ?>
 			</ul>
 		</div><!-- /.medium-6 columns -->
 
@@ -261,22 +316,16 @@
 
 			<section class="contact-form">
 
-				<form action="demo_form.asp">
-					<label for="name">First name:</label>
-					<input type="text" id="name" name="name"><br>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-					<label for="email">Email:</label>
-					<input type="text" id="email" name="email"><br>
+        <?php the_content(); ?>
+        <hr>
 
-					<label for="name">Phone:</label>
-					<input type="text" id="phone" name="phone"><br>
+        <?php endwhile; else: ?>
 
-					<label for="name">Message:</label>
-					<textarea type="text" id="message" name="message"></textarea><br>
+        <p>There are no posts or pages here</p>
 
-					<input class="button send-button" type="submit" value="submit">	
-					<input class="button cancel-button" type="reset" value="reset">	
-				</form>
+        <?php endif; ?>
 
 			</section><!-- /.contact-form -->
 			

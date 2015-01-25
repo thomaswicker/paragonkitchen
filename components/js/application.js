@@ -67,9 +67,9 @@ $(document).foundation({
   }
 });
 
-var t = $(".top-bar-section").offset().top;
+var t = $(".superhero-inside").offset().top;
 
-$(document).scroll(function(){
+$(window).scroll(function(){
   if($(this).scrollTop() > t) {
     $('.nav_elements a').attr('style', 'color: white');
     $('.top-bar').css({"background-image":"none"});
@@ -85,29 +85,11 @@ $(document).scroll(function(){
 });
 
 $(window).scroll(function() {
-    if ($(this).scrollTop()) {
-        $('.scrolltotop-button:hidden').stop(true, true).fadeIn();
-    } else {
-        $('.scrolltotop-button').stop(true, true).fadeOut();
-    }
-});
-
-
-//SMMOTHSCROLL JS
-
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 600);
-        return false;
-      }
-    }
-  });
+  if ($(this).scrollTop()) {
+      $('.scrolltotop-button:hidden').stop(true, true).fadeIn();
+  } else {
+      $('.scrolltotop-button').stop(true, true).fadeOut();
+  }
 });
 
 

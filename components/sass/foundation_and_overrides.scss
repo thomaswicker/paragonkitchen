@@ -12,6 +12,7 @@
 // We use these to control the timer styles
 $orbit-timer-bg: rgba(255,255,255,0.3) !default;
 $orbit-timer-show-progress-bar: true !default;
+$topbar-sticky-class: ".sticky";
 
 .orbit-container {
 	@include mq(sm) {
@@ -108,7 +109,4 @@ $orbit-timer-show-progress-bar: true !default;
 		}
 	}
 }
-
-$topbar-sticky-class: ".sticky";
-
 

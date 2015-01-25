@@ -116,6 +116,13 @@ blockquote {
 	}
 }
 
+.fixed {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
 // ############### PARTIAL IMPORT ############### //
 @import 'about';
 
@@ -131,6 +138,9 @@ blockquote {
 // ############### PARTIAL IMPORT ############### //
 @import 'contact';
 
+.orbit-caption {
+
+}
 
 .nav_elements {
 	color: white !important;

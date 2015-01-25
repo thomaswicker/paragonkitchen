@@ -258,6 +258,19 @@
   background-color: #e28605;
 }
 
+.wpcf7-submit {
+  background-color: #FBAA38;
+  color: #FFFFFF;
+  padding: 12px 23px 12px 23px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  border: none !important;
+  font-size: 1rem;
+}
+.wpcf7-submit:hover {
+  background-color: #e28605;
+}
+
 .cancel-button {
   background-color: #bbb;
   color: #FFFFFF;
@@ -364,6 +377,13 @@ blockquote {
   blockquote {
     font-size: 1.2rem;
   }
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 
 /*
@@ -1034,6 +1054,25 @@ blockquote {
 }
 .contact-body .contact-inner .contact-form {
   margin-top: 10px;
+}
+
+.wpcf7-response-output {
+  margin: 0px !important;
+  padding: .5em 1em .5em 1em;
+}
+
+div.wpcf7-mail-sent-ok {
+  border: 0px;
+  border: none !important;
+  background-color: #AAC750;
+  color: #FFFFFF;
+}
+
+div.wpcf7-validation-errors {
+  border: 0px;
+  border: none !important;
+  background-color: #A60F1B;
+  color: #FFFFFF;
 }
 
 .nav_elements {

@@ -35,14 +35,14 @@
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
   <!-- Mobile viewport -->
-  <meta name="viewport" content="user-scalable=no; width=device-width; initial-scale=1; maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
 	<?php wp_head(); ?>
 
 		<!-- Ancient Scrolls -->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/bower_components/foundation/css/foundation.css">
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/application.min.css">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -52,8 +52,7 @@
 
 	<section class="superhero medium-12 ">
 		
-		<div class="sticky">
-			<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+			<nav class="top-bar navforfixed" data-topbar role="navigation">
 
 			  <ul class="title-area">
 			    <li class="name">
@@ -73,34 +72,35 @@
 			    </ul><!-- /.right -->
 			  </section><!-- /.top-bar-section -->
 			</nav><!-- /.top-bar -->
-		</div><!-- /.sticky -->
 
-		<section class="superhero-inside medium-12">
+		<section id="superhero" class="superhero-inside medium-12">
 			<ul class="example-orbit" data-orbit>
-			  <li>
-			    <img src="<?php bloginfo( 'template_directory' ); ?>/img/hero_photos_split.jpg" alt="slide 1" />
-			    <div class="orbit-caption">
-			      Caption One.
-			    </div>
-			  </li>
-			  <li class="active">
-			    <img src="<?php bloginfo( 'template_directory' ); ?>/img/hero_photos_catering.jpg" alt="slide 2" />
-			    <div class="orbit-caption">
-			      Caption Two.
-			    </div>
-			  </li>
-			  <li>
-			    <img src="<?php bloginfo( 'template_directory' ); ?>/img/hero_photos_wine.jpg" alt="slide 3" />
-			    <div class="orbit-caption">
-			      Caption Three.
-			    </div>
-			  </li>
-			  <li>
-			    <img src="<?php bloginfo( 'template_directory' ); ?>/img/hero_photos_1.jpg" alt="slide 4" />
-			    <div class="orbit-caption">
-			      Caption Four.
-			    </div>
-			  </li>
+
+				<?php
+				$args = array(
+					'post_type' => 'imageforhero',
+					'posts_per_page' => 5
+					);
+
+				$the_query = new WP_Query( $args );
+
+				?>
+
+				<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+				
+				  <li>
+				    <?php the_field( 'image_for_hero' ); ?>
+				    <div class="orbit-caption">
+				      <?php the_field( 'caption_for_the_hero' ); ?>
+				    </div>
+				  </li>
+
+				<?php endwhile; else: ?>
+
+				<p>There are no posts or pages here</p>
+
+				<?php endif; ?>
+
 			</ul><!-- /.example-orbit -->	
 		</section><!-- /.superhero-inside -->	
 

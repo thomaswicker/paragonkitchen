@@ -60,6 +60,20 @@
 	}
 }
 
+.wpcf7-submit {
+	background-color: $color-4;
+	color: $white;
+	padding: 12px 23px 12px 23px;
+	margin-top: 10px;
+	text-transform: uppercase;
+	border: none !important;
+	font-size: 1rem;
+
+	&:hover {
+		background-color: darken($color-4, 15%);
+	}
+}
+
 .cancel-button {
 	background-color: #bbb;
 	color: $white;
