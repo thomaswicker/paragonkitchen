@@ -51,81 +51,68 @@
 	<span id="calendar" class="scrollspy"></span><!-- /END OF SCROLLSPY - CLASSES -->	
 
 	<div class="calendar-header medium-12 columns">
-		<h2 class="page-header medium-4 columns">Upcoming Calendar</h2>
-			<!-- <div class="class-select medium-8 columns">
-				<select>
-					<option selected="true" disabled="disabled">Select another class</option>
-				  <option value="frenchclassics">French Classics</option>
-				  <option value="comfortfoodclassics">Comfort Food Classics</option>
-				  <option value="essentials">Essentials I & II</option>
-				  <option value="Italian Classics">Italian Classics</option>
-			  	<option value="freshsausagemaking">Fresh Sausage Making</option>
-				  <option value="letsgetgrilling">Let's Get Grilling</option>
-				  <option value="mothersauces">Mother Sauces</option>
-				  <option value="mexicanstreettacos">Mexican Street Tacos</option>
-				</select>
-			</div> -->
-		</div><!-- /.calendar-header -->	
+	<h2 class="page-header medium-4 columns">Upcoming Calendar</h2>
+	</div><!-- /.calendar-header -->	
 
-		<div class="calendar-listing">
+	<div class="calendar-listing">
 
-			<?php
-			$args = array(
-				'post_type' => 'events',
-				'order' => 'ASC',
-				'posts_per_page' => 8
-				);
+		<?php
+		$args = array(
+			'post_type' => 'events',
+			'order' => 'ASC',
+			'posts_per_page' => 8
+			);
 
-			$the_query = new WP_Query( $args );
+		$the_query = new WP_Query( $args );
 
-			?>
+		?>
 
-			<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+		<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
 
-				<section class="calendar-card-container medium-12 columns">
+			<section class="calendar-card-container medium-12 columns">
 
-					<div class="calendar-card">
+				<div class="calendar-card">
 
-						<div class="calendar-card-left">
+					<div class="calendar-card-left">
 
-							<div class="calendar-card-photo">
-								<?php the_field( 'image' ); ?>
-							</div><!-- /.calendar-card-photo -->	
+						<div class="calendar-card-photo">
+							<img src="<?php the_field( 'image' ); ?>" alt=""> 
+						</div><!-- /.calendar-card-photo -->	
 
-						</div><!-- /.calendar-card-left -->	
+					</div><!-- /.calendar-card-left -->	
 
-						<div class="calendar-card-center">
+					<div class="calendar-card-center">
 
-							<div class="calendar-card-header medium-12 columns">
-								<?php the_field( 'title_of_class' ); ?>
-							</div><!-- /.calendar-card-header -->	
+						<div class="calendar-card-header medium-12 columns">
+							<?php the_field( 'title_of_class' ); ?>
+						</div><!-- /.calendar-card-header -->	
 
-							<div class="calendar-card-date">
-								<?php the_field( "date_of_class" ); ?>
-							</div>
+						<div class="calendar-card-date">
+							<?php the_field( "date_of_class" ); ?>
+						</div>
 
-							<div class="calendar-card-text medium-12 columns">
-								<?php the_field( "description_of_class" ); ?>
-							</div><!-- /.calendar-card-text -->	
+						<div class="calendar-card-text medium-12 columns">
+							<?php the_field( "description_of_class" ); ?>
+						</div><!-- /.calendar-card-text -->	
 
-							<div>
-								<?php the_field( 'paypal_button' ); ?>
-							</div>
+						<div>
+							<?php the_field( 'paypal_button' ); ?>
+						</div>
 
-						</div><!-- /.calendar-card-center -->
+					</div><!-- /.calendar-card-center -->
 
-						<div class="class-card-right">
+					<div class="class-card-right">
 
-						</div><!-- /.calendar-card-right -->
+					</div><!-- /.calendar-card-right -->
 
-					</div><!-- /.calendar-card -->
+				</div><!-- /.calendar-card -->
 
 				</section><!-- /.calendar-card-container -->
 
 
-			<?php endwhile; else: ?>
+		<?php endwhile; else: ?>
 
-			<p>There are no posts or pages here</p>
+		<p>There are no posts or pages here</p>
 
 		<?php endif; ?>
 
@@ -145,7 +132,6 @@
 				<?php
 				$args = array(
 				'post_type' => 'classes-column-1',
-				'order' => 'ASC',
 				'posts_per_page' => 8					)
 
 				;
@@ -173,7 +159,6 @@
 					<?php
 					$args = array(
 					'post_type' => 'classes-column-2',
-					'order' => 'ASC',
 					'posts_per_page' => 8					)
 
 					;
@@ -200,7 +185,6 @@
 				<?php
 				$args = array(
 				'post_type' => 'classes-column-3',
-				'order' => 'ASC',
 				'posts_per_page' => 8					)
 
 				;
@@ -242,17 +226,29 @@
 				<div class="accordion-content accordion-content-1" style="display: block">
 					<div class="panel-left"><img src="<?php bloginfo( 'template_directory' ); ?>/img/services_pic_1.jpg" alt="Our Services - Picture of people serving food"></div><!-- /.panel-left -->	
 					<div class="panel-right">
-						<h4>Our Catering Services</h4>
-						Drop off/Pick up meals are perfect for you if you are looking for an easier way to balance your work and family life and still feed your family a healthy and nutritious meal. There are many options to choose from such as….
-						<ul>
-							<li>Emilia Romagna Lasagna</li>
-							<li>Beef Bourguignon</li>
-							<li>Rustic chicken and garlic gravy served over pommes puree</li>
-							<li>Balsamic grilled vegetables with basil quinoa</li>
-							<li>Pork tenderloin and ratatouille</li>
-							<li>Minestrone soup and grilled cibatta bread</li>
-						</ul>
-						<p>There is no charge per hour for chef just per entrée.</p>
+
+						<?php
+						$args = array(
+						'post_type' => 'services-catering',
+						'posts_per_page' => 1					)
+
+						;
+
+						$the_query = new WP_Query( $args );
+
+						?>
+
+						<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+							<h4><?php the_field( 'header_text_for_catering' ); ?></h4>
+							<p><?php the_field( 'body_text_for_catering' ); ?></p>
+
+						<?php endwhile; else: ?>
+
+						<p>There are no posts or pages here</p>
+
+						<?php endif; ?>
+						
 					</div><!-- /.panela-right -->
 				</div><!-- /.content -->
 			</section><!-- /section -->
@@ -262,9 +258,27 @@
 				<div class="accordion-content">
 					<div class="panel-left medium-4"><img src="<?php bloginfo( 'template_directory' ); ?>/img/services_pic_2.jpg" alt="Our Services - Private Chef Services"></div><!-- /.panel-left -->	
 					<div class="panel-right">
-						<h4>Private Chef</h4>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<?php
+						$args = array(
+						'post_type' => 'services-privatechef',
+						'posts_per_page' => 1					)
+
+						;
+
+						$the_query = new WP_Query( $args );
+
+						?>
+
+						<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+							<h4><?php the_field( 'header_text_for_private_chef' ); ?></h4>
+							<p><?php the_field( 'body_text_for_private_chef' ); ?></p>
+
+						<?php endwhile; else: ?>
+
+						<p>There are no posts or pages here</p>
+
+						<?php endif; ?>
 					</div><!-- /.panel-right -->
 				</div><!-- /.content -->
 			</section><!-- /section -->
@@ -274,9 +288,27 @@
 				<div class="accordion-content">  
 					<div class="panel-left"><img src="<?php bloginfo( 'template_directory' ); ?>/img/services_pic_3.jpg" alt="Our Services - Wine pairing"></div><!-- /.panel-left -->	
 					<div class="panel-right">
-						<h4>Wine & Pairings</h4>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<?php
+						$args = array(
+						'post_type' => 'services-wine',
+						'posts_per_page' => 1					)
+
+						;
+
+						$the_query = new WP_Query( $args );
+
+						?>
+
+						<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+							<h4><?php the_field( 'header_text_for_wine_pairing' ); ?></h4>
+							<p><?php the_field( 'body_text_for_wine_pairing' ); ?></p>
+
+						<?php endwhile; else: ?>
+
+						<p>There are no posts or pages here</p>
+
+						<?php endif; ?>
 					</div><!-- /.panel-right -->
 				</div><!-- /.content -->
 			</section><!-- /section -->

@@ -68,7 +68,7 @@ $(document).foundation({
 });
 
 
-var t = $(".superhero-inside").offset().top;
+var t = $("#backtotop").offset().top;
 
 $(window).scroll(function(){
   if($(this).scrollTop() > t) {

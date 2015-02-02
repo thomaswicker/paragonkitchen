@@ -195,7 +195,7 @@
   .superhero .superhero-inside {
     box-shadow: none;
     padding: 4px;
-    margin-top: 1em;
+    margin-top: 4.8em;
   }
 }
 
@@ -293,6 +293,9 @@ html, body {
   background-repeat: repeat;
   background-color: #63BFC0;
   overflow-x: hidden;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 
 .body-main {
@@ -343,6 +346,7 @@ h2.page-header {
     width: 100%;
     max-width: none;
     margin: 40px 0px 0px 0px;
+    padding: 5px 15px 5px 15px;
   }
 }
 
@@ -535,6 +539,39 @@ blockquote {
 */
 /* ## App specific SCSS ## */
 /* ## Google Font Imports ## */
+.classes-listing {
+  background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/classes_plaid.png");
+  padding-bottom: 50px;
+  background-color: #FFFFFF !important;
+}
+
+.classes-body {
+  background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/classes_plaid.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px 50px 50px 30px;
+}
+@media only screen and (max-width: 40em) {
+  .classes-body {
+    padding: 0px 10px 50px 10px;
+  }
+}
+.classes-body .class-select {
+  max-width: 400px;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 40em) {
+  .classes-body .class-select {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #222;
+    max-width: 600px;
+    padding: 0px 20px 50px 20px;
+    margin-top: 30px;
+  }
+}
+
 .calendar-card {
   float: left;
   width: 100%;
@@ -550,7 +587,7 @@ blockquote {
 }
 @media only screen and (max-width: 40em) {
   .calendar-card {
-    padding: 30px 0px 0px 0px;
+    padding: 30px 0px 30px 0px;
   }
 }
 .calendar-card .calendar-card-header {
@@ -744,39 +781,6 @@ blockquote {
   background-color: #ffffff;
 }
 
-.classes-listing {
-  background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/classes_plaid.png");
-  padding-bottom: 50px;
-  background-color: #FFFFFF !important;
-}
-
-.classes-body {
-  background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/classes_plaid.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0px 50px 50px 30px;
-}
-@media only screen and (max-width: 40em) {
-  .classes-body {
-    padding: 0px 20px 50px 20px;
-  }
-}
-.classes-body .class-select {
-  max-width: 400px;
-  padding-top: 70px;
-  padding-bottom: 10px;
-}
-@media only screen and (max-width: 40em) {
-  .classes-body .class-select {
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: #222;
-    max-width: 600px;
-    padding: 0px 20px 50px 20px;
-    margin-top: 30px;
-  }
-}
-
 /*
   ____  _____ ______     _____ ____ _____ ____  
  / ___|| ____|  _ \ \   / /_ _/ ___| ____/ ___| 
@@ -812,7 +816,7 @@ blockquote {
 }
 @media only screen and (max-width: 40em) {
   .services-body {
-    padding: 0px 40px 50px 20px;
+    padding: 0px 15px 50px 15px;
   }
 }
 .services-body .services-inner {
@@ -821,9 +825,11 @@ blockquote {
   margin-right: auto;
   width: 98%;
 }
-.services-body .services-inner ul {
-  list-style: disc;
-  padding: 20px 0px 20px 0px;
+.services-body .panel-right ul {
+  margin-top: -5px;
+}
+.services-body .panel-right ul li {
+  padding-left: 5px;
 }
 .services-body article.accordion {
   width: 100%;
