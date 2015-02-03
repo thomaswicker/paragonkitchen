@@ -75,7 +75,7 @@
 			</nav><!-- /.top-bar -->
 
 		<section class="superhero-inside medium-12">
-			<ul class="example-orbit" data-orbit>
+			<div class="example-orbit" data-orbit>
 
 				<?php
 				$args = array(
@@ -89,12 +89,7 @@
 
 				<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
 				
-				  <li>
-				    <?php the_field( 'image_for_hero' ); ?>
-				    <div class="orbit-caption">
-				      <?php the_field( 'caption_for_the_hero' ); ?>
-				    </div>
-				  </li>
+				<?php the_field( 'image_for_hero' ); ?>
 
 				<?php endwhile; else: ?>
 
@@ -102,7 +97,7 @@
 
 				<?php endif; ?>
 
-			</ul><!-- /.example-orbit -->	
+			</div><!-- /.example-orbit -->	
 		</section><!-- /.superhero-inside -->	
 
 	</section><!-- /.superhero -->	

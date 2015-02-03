@@ -46,6 +46,8 @@
 
 </section><!-- /.about-body -->	
 
+<img id="silouette_pan" src="<?php bloginfo( 'template_directory' ); ?>/img/silouette_pan.png" alt="Illustration of a Pan">
+
 <section class="classes-body medium-12 columns">
 
 	<span id="calendar" class="scrollspy"></span><!-- /END OF SCROLLSPY - CLASSES -->	
@@ -333,13 +335,14 @@
 		<div class="contact-inner-left">
 
 			<div class="google-map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26079.790367741716!2d-101.8102190371979!3d35.20712166548833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x870148d4b245cf03%3A0xd0f3d11c6836d2af!2sAmarillo%2C+TX!5e0!3m2!1sen!2sus!4v1421540157766" width="100%" height="250" frameborder="0" style="border: 2px solid #003B3D"></iframe>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3262.0990266718236!2d-101.92875199999999!3d35.15415099999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x870150794bff895d%3A0x98fe23e7329223c0!2s5205+Spartanburg+Dr%2C+Amarillo%2C+TX+79119!5e0!3m2!1sen!2sus!4v1422939639195" width="100%" height="250" frameborder="0" style="border: 2px solid #003B3D"></iframe>
 
 				<div class="contact-info">
 					<span>The Paragon Kitchen</span></br>
-					12345 That Street</br>
-					Amarillo, TX 82321</br>
-					<a href="mailto:kristi@theparagonkitchen.com ">kristi@theparagonkitchen.com</a>
+					5205 Spartanurg </br>
+					Amarillo, TX 79119</br>
+					<a href="mailto:kristi@aragonga.com">kristi@aragonga.com</a>
 				</div><!-- /.contact-info -->
 			</div><!-- /.google-map -->
 		</div><!-- /.contact-inner-left -->
