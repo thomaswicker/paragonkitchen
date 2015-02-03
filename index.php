@@ -318,9 +318,51 @@
 
 	</div><!-- /.services-inner -->	
 
-</section><!-- /.services-body -->	
+</section><!-- /.services-body -->
 
-<div class="services-checkers"></div>
+
+
+
+<section class="faqs-body medium-12 columns">
+
+	<span id="faqs" class="scrollspy"></span><!-- /END OF SCROLLSPY - FAQs -->	
+
+	<div class="faqs-header medium-12 columns">
+		<h2 class="page-header">FAQs</h2>
+	</div><!-- /.faqs-header -->	
+
+	<section class="faqs-inner">
+
+	<?php
+	$args = array(
+	'post_type' => 'FAQs',
+	'posts_per_page' => 20					)
+
+	;
+
+	$the_query = new WP_Query( $args );
+
+	?>
+
+	<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+		<div class="faqs-block">
+			<div class="faqs-header"><?php the_field( 'faq_header' ); ?></div>
+			<p class="faqs-body"><?php the_field( 'faq_body' ); ?></p>
+		</div>
+
+	<?php endwhile; else: ?>
+
+	<p>There are no FAQs to post here</p>
+
+	<?php endif; ?>
+
+	</section><!-- /.faqs-inner -->	
+
+</section><!-- /.faqs-body -->	
+
+
+<div class="contact-checkers"></div>
 
 <section class="contact-body medium-12 columns">
 
@@ -340,9 +382,10 @@
 
 				<div class="contact-info">
 					<span>The Paragon Kitchen</span></br>
-					5205 Spartanurg </br>
+					5205 Spartanburg </br>
 					Amarillo, TX 79119</br>
 					<a href="mailto:kristi@aragonga.com">kristi@aragonga.com</a>
+					<a href="tel:806-674-5245">(806) 674.5245</a>
 				</div><!-- /.contact-info -->
 			</div><!-- /.google-map -->
 		</div><!-- /.contact-inner-left -->

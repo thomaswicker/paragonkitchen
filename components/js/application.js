@@ -50,6 +50,17 @@ $(document).ready(function() {
   });
 
   $('.scrollspy').scrollSpy(); 
+
+  // Code for handling the FAQs hide/show
+  var faqContainer = $('.faqs-block');
+  var faqHeader = $('.faqs-header');
+  var faqBody = $('.faqs-body');
+
+  faqHeader.on('click', function () {
+    $(this).toggleClass('activeFAQHeader');
+    $(this).next().toggleClass('hiddenFAQ');
+  });
+
 });
 
 
