@@ -19,8 +19,8 @@ var htmlSources = ['**/*.html'];
 gulp.task('js', function() {
     return gulp.src(jsSources)
     .pipe(concat('application.js'))
-    .pipe(uglify())
     .pipe(gulp.dest('js'))
+    .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('js'))
 });

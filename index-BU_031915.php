@@ -55,8 +55,70 @@
 	<div class="calendar-header medium-12 columns">
 	<h2 class="page-header medium-4 columns">Upcoming Calendar</h2>
 	</div><!-- /.calendar-header -->	
-	
-	<?php get_sidebar(); ?>
+
+	<div class="calendar-listing">
+
+		<?php
+		$args = array(
+			'post_type' => 'events',
+			'order' => 'ASC',
+			'posts_per_page' => 8
+			);
+
+		$the_query = new WP_Query( $args );
+
+		?>
+
+		<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post() ?>
+
+			<section class="calendar-card-container medium-12 columns">
+
+				<div class="calendar-card">
+
+					<div class="calendar-card-left">
+
+						<div class="calendar-card-photo">
+							<img src="<?php the_field( 'image' ); ?>" alt=""> 
+						</div><!-- /.calendar-card-photo -->	
+
+					</div><!-- /.calendar-card-left -->	
+
+					<div class="calendar-card-center">
+
+						<div class="calendar-card-header medium-12 columns">
+							<?php the_field( 'title_of_class' ); ?>
+						</div><!-- /.calendar-card-header -->	
+
+						<div class="calendar-card-date">
+							<?php the_field( "date_of_class" ); ?>
+						</div>
+
+						<div class="calendar-card-text medium-12 columns">
+							<?php the_field( "description_of_class" ); ?>
+						</div><!-- /.calendar-card-text -->	
+
+						<div>
+							<?php the_field( 'paypal_button' ); ?>
+						</div>
+
+					</div><!-- /.calendar-card-center -->
+
+					<div class="class-card-right">
+
+					</div><!-- /.calendar-card-right -->
+
+				</div><!-- /.calendar-card -->
+
+				</section><!-- /.calendar-card-container -->
+
+
+		<?php endwhile; else: ?>
+
+		<p>There are no posts or pages here</p>
+
+		<?php endif; ?>
+
+	</div><!-- /.calendar-listing -->	
 
 </section><!-- /.calendar-body -->	
 

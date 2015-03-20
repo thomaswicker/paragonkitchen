@@ -1,0 +1,258 @@
+/*
+  _______     _______ _   _ _____ ____  
+ | ____\ \   / / ____| \ | |_   _/ ___| 
+ |  _|  \ \ / /|  _| |  \| | | | \___ \ 
+ | |___  \ V / | |___| |\  | | |  ___) |
+ |_____|  \_/  |_____|_| \_| |_| |____/ 
+                                                                                                                                                                                                                                                                                                                                      
+*/
+
+@import 'vars';
+
+
+.single-event-left {
+	background-color: white;
+	padding: 33px 30px 30px 40px;
+	margin-top: 20px;
+	border: 4px solid $color-5;
+}
+
+.single-event-right {
+	padding: 20px 20px 20px 20px;
+}
+
+.events-container {
+	padding: 0px 50px 0px 50px;
+	min-height: 650px;
+
+	@include mq (sm) {
+		padding: 0px 20px 0px 20px;
+	}
+}
+
+.post-edit-link {
+	position: absolute;
+	bottom: 140px;
+	left: 40px;
+	background-color: orange;
+	background-color: $color-4;
+	padding: 8px 12px 8px 12px;
+	color: $white;
+	text-transform: uppercase;
+	display: none;
+}
+
+//Customizations to The Events Calendar plugin from Tribe
+
+.tribe-events-month,  {
+	margin-top: 100px;
+
+	@include mq (sm) {
+		margin-top: 250px;
+	}
+}
+
+.tribe-events-single-event-description {
+	form input {
+
+	}
+}
+
+.tribe-events-sub-nav li a {
+	background-color: transparent;
+}
+
+.tribe-events-single-event-description p img {
+	width: 100%;
+	max-width: 350px;
+	padding: 9px;
+	background-color: white;
+	box-shadow: 0px 0px 2px #888;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.tribe-events-single-section-title {
+	display: none;
+}
+
+.tribe-events-single {
+	margin-top: 100px;
+}
+
+
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-previous {
+
+	@include mq(md) {
+		text-align: center;
+	}
+
+	@include mq(sm) {
+		text-align: center;
+	}
+}
+
+.tribe-events-nav-previous {
+	background-color: orange;
+	color: white;
+	padding: 8px 12px 8px 12px;
+	text-transform: uppercase;
+
+
+	&:hover {
+		background-color: lighten(orange, 15%);
+	}
+
+	a {
+		color: white;
+	}
+}
+
+.tribe-events-nav-next {
+	background-color: orange;
+	color: white;
+	padding: 8px 12px 8px 12px;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: lighten(orange, 15%);
+	}
+
+	a {
+		color: white;
+	}
+}
+
+#footer-sidebar {
+	margin-top: -80px;
+}
+
+.view-calendar-btn {
+	float: right;
+	text-transform: uppercase;
+	font-size: .9rem;
+
+	@include mq (sm) {
+		margin-top: 80px;
+	}
+}
+
+.events-paragon-logo {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+
+	img {
+		width: 100%;
+		max-width: 190px;
+	}
+}
+
+.month-view-home-btn {
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	text-transform: uppercase;
+	font-size: .9rem;
+
+	@include mq (sm) {
+		width: 92%;
+		top: 120px;
+		left: 20px;
+		font-size: .8rem;
+	}
+}
+
+.month-view-calendar-btn {
+	position: absolute;
+	top: 25px;
+	right: 245px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	background-color: #777;
+	font-size: .9rem;
+
+	@include mq (sm) {
+		width: 92%;
+		top: 170px;
+		left: 20px;
+		font-size: .8rem;
+	}
+
+	&:hover {
+		background-color: #999;
+	}
+}
+
+.tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group {
+	padding: 10px 30px 0px 30px;
+	width: 100%;
+
+	dl dt {
+		font-size: 1.4rem;
+		margin-top: 20px;
+	}
+}
+
+.tribe-events-list-widget-events-left {
+	float: left;
+	width: 85px;
+	min-height: 100px;
+	background-color: $color-5;
+	text-align: center;
+	padding: 22px 0px 0px 0px;
+
+	i {
+		font-size: 3rem;
+		color: white;
+	}
+}
+
+.tribe-events-list-widget-events-right {
+	float: left;
+	width: calc(100% - 85px);
+	background-color: white;
+	padding: 10px 10px 10px 20px;
+}
+
+
+.vcalendar {
+	list-style-type: none;
+
+	@include mq (sm) {
+		margin-top: 10px;
+	}
+
+	a {
+
+		li {
+			border: 2px solid #008CBA
+		}
+
+		&:hover {
+			li {
+				border: 3px solid #008CBA;
+
+				.tribe-events-list-widget-events-left {
+					background-color: #008CBA;
+				}
+			}
+		}
+	}
+	
+	li {
+		float: left;
+		width: 100%;
+		background-color: $white;
+		padding: 0px;
+		margin-top: 1.5em;
+
+		@include mq (md) {
+			padding: 0px;
+		}
+
+		@include mq (sm) {
+			padding: 0px;
+		}
+	}
+}

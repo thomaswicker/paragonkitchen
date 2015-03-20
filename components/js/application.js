@@ -54,7 +54,7 @@ $(document).ready(function() {
   // Code for handling the FAQs hide/show
   var faqContainer = $('.faqs-block');
   var faqHeader = $('.faqs-header');
-  var faqBody = $('.faqs-body');
+  var faqBody = $('.faqs-block p');
 
   faqHeader.on('click', function () {
     $(this).toggleClass('activeFAQHeader');
@@ -128,4 +128,5 @@ $(window).scroll(function() {
   });
 
 })(jQuery);
+
 

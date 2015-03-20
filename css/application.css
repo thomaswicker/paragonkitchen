@@ -54,6 +54,8 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 .orbit-bullets {
   display: none;
 }
@@ -223,6 +225,10 @@
 */
 /* ## App specific SCSS ## */
 /* ## Google Font Imports ## */
+.button i {
+  margin-right: 8px;
+}
+
 .scrolltotop-button {
   position: fixed;
   bottom: 20px;
@@ -322,6 +328,10 @@ html, body {
     top: 4px;
     left: 12px;
   }
+}
+
+h1.events-header {
+  text-align: center;
 }
 
 h1 {
@@ -558,6 +568,18 @@ blockquote {
 */
 /* ## App specific SCSS ## */
 /* ## Google Font Imports ## */
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.events-container {
+  padding: 0px 50px 0px 50px;
+}
+
 .classes-listing {
   background-image: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/classes_plaid.png");
   padding-bottom: 50px;
@@ -589,16 +611,6 @@ blockquote {
     padding: 0px 20px 50px 20px;
     margin-top: 30px;
   }
-}
-
-.classes-body::before {
-  content: url("http://www.paragonkitchen.com/wp-content/themes/paragonkitchen/img/tape.png");
-  position: absolute;
-  width: 160px;
-  top: 115px;
-  left: 50%;
-  margin-left: -80px;
-  z-index: 1001;
 }
 
 .calendar-card {
@@ -801,6 +813,251 @@ blockquote {
 }
 .ourclasses-list ul li:nth-child(odd) {
   background-color: #ffffff;
+}
+
+/*
+  _______     _______ _   _ _____ ____  
+ | ____\ \   / / ____| \ | |_   _/ ___| 
+ |  _|  \ \ / /|  _| |  \| | | | \___ \ 
+ | |___  \ V / | |___| |\  | | |  ___) |
+ |_____|  \_/  |_____|_| \_| |_| |____/ 
+                                                                                                                                                                                                                                                                                                                                      
+*/
+/*
+ __     ___    ____  ____  
+ \ \   / / \  |  _ \/ ___| 
+  \ \ / / _ \ | |_) \___ \ 
+   \ V / ___ \|  _ < ___) |
+    \_/_/   \_\_| \_\____/ 
+                           
+*/
+/* ## App specific SCSS ## */
+/* ## Google Font Imports ## */
+.single-event-left {
+  background-color: white;
+  padding: 33px 30px 30px 40px;
+  margin-top: 20px;
+  border: 4px solid #89D2F5;
+}
+
+.single-event-right {
+  padding: 20px 20px 20px 20px;
+}
+
+.events-container {
+  padding: 0px 50px 0px 50px;
+  min-height: 650px;
+}
+@media only screen and (max-width: 40em) {
+  .events-container {
+    padding: 0px 20px 0px 20px;
+  }
+}
+
+.post-edit-link {
+  position: absolute;
+  bottom: 140px;
+  left: 40px;
+  background-color: orange;
+  background-color: #FBAA38;
+  padding: 8px 12px 8px 12px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  display: none;
+}
+
+.tribe-events-month {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 40em) {
+  .tribe-events-month {
+    margin-top: 250px;
+  }
+}
+
+.tribe-events-sub-nav li a {
+  background-color: transparent;
+}
+
+.tribe-events-single-event-description p img {
+  width: 100%;
+  max-width: 350px;
+  padding: 9px;
+  background-color: white;
+  box-shadow: 0px 0px 2px #888;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tribe-events-single-section-title {
+  display: none;
+}
+
+.tribe-events-single {
+  margin-top: 100px;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-previous {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 40em) {
+  #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-previous {
+    text-align: center;
+  }
+}
+
+.tribe-events-nav-previous {
+  background-color: orange;
+  color: white;
+  padding: 8px 12px 8px 12px;
+  text-transform: uppercase;
+}
+.tribe-events-nav-previous:hover {
+  background-color: #ffc04d;
+}
+.tribe-events-nav-previous a {
+  color: white;
+}
+
+.tribe-events-nav-next {
+  background-color: orange;
+  color: white;
+  padding: 8px 12px 8px 12px;
+  text-transform: uppercase;
+}
+.tribe-events-nav-next:hover {
+  background-color: #ffc04d;
+}
+.tribe-events-nav-next a {
+  color: white;
+}
+
+#footer-sidebar {
+  margin-top: -80px;
+}
+
+.view-calendar-btn {
+  float: right;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+@media only screen and (max-width: 40em) {
+  .view-calendar-btn {
+    margin-top: 80px;
+  }
+}
+
+.events-paragon-logo {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+.events-paragon-logo img {
+  width: 100%;
+  max-width: 190px;
+}
+
+.month-view-home-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+@media only screen and (max-width: 40em) {
+  .month-view-home-btn {
+    width: 92%;
+    top: 120px;
+    left: 20px;
+    font-size: .8rem;
+  }
+}
+
+.month-view-calendar-btn {
+  position: absolute;
+  top: 25px;
+  right: 245px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background-color: #777;
+  font-size: .9rem;
+}
+@media only screen and (max-width: 40em) {
+  .month-view-calendar-btn {
+    width: 92%;
+    top: 170px;
+    left: 20px;
+    font-size: .8rem;
+  }
+}
+.month-view-calendar-btn:hover {
+  background-color: #999;
+}
+
+.tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group {
+  padding: 10px 30px 0px 30px;
+  width: 100%;
+}
+.tribe-events-event-meta .column dl dt, .tribe-events-event-meta .tribe-events-meta-group dl dt {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.tribe-events-list-widget-events-left {
+  float: left;
+  width: 85px;
+  min-height: 100px;
+  background-color: #89D2F5;
+  text-align: center;
+  padding: 22px 0px 0px 0px;
+}
+.tribe-events-list-widget-events-left i {
+  font-size: 3rem;
+  color: white;
+}
+
+.tribe-events-list-widget-events-right {
+  float: left;
+  width: calc(100% - 85px);
+  background-color: white;
+  padding: 10px 10px 10px 20px;
+}
+
+.vcalendar {
+  list-style-type: none;
+}
+@media only screen and (max-width: 40em) {
+  .vcalendar {
+    margin-top: 10px;
+  }
+}
+.vcalendar a li {
+  border: 2px solid #008CBA;
+}
+.vcalendar a:hover li {
+  border: 3px solid #008CBA;
+}
+.vcalendar a:hover li .tribe-events-list-widget-events-left {
+  background-color: #008CBA;
+}
+.vcalendar li {
+  float: left;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 0px;
+  margin-top: 1.5em;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .vcalendar li {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .vcalendar li {
+    padding: 0px;
+  }
 }
 
 /*
@@ -1028,9 +1285,9 @@ blockquote {
   padding: .5em 0em .5em 1em;
   font-family: "Open Sans", sans-serif;
   font-size: 1.1rem;
-  border-bottom: 1px solid #FFFFFF;
+  border: 1px solid #FFFFFF;
 }
-.faqs-body .faqs-inner .faqs-block .faqs-body {
+.faqs-body .faqs-inner .faqs-block p {
   display: block;
   float: left;
   width: 100%;
@@ -1197,11 +1454,23 @@ div.wpcf7-validation-errors {
 }
 
 .footer {
-  background-color: #000000;
+  background-color: transparent;
   color: #FFFFFF;
   font-size: .9rem;
   text-align: center;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px 0px 10px;
+}
+.footer .footer-left {
+  float: left;
+  width: 50%;
+  text-align: left;
+  padding-left: 30px;
+}
+.footer .footer-right {
+  float: left;
+  width: 50%;
+  text-align: right;
+  padding-right: 30px;
 }
 
 #silouette_pan {

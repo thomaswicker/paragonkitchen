@@ -8,7 +8,8 @@
 	<script src="<?php bloginfo( 'template_directory' ); ?>/js/application.min.js"></script>
 
 	<footer class="footer">
-		Copyright &copy; <?php echo date("Y"); echo " "; bloginfo('name'); ?> - All rights reserved.
+		<div class="footer-left">SITE BY: <a href="http://www.xiri.io" target="blank" class="xiri_link">XIRI</a></div>
+		<div class="footer-right">Copyright &copy; <?php echo date("Y"); echo " "; bloginfo('name'); ?> - All rights reserved.</div>
 	</footer>
 
 	<script>

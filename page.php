@@ -1,12 +1,10 @@
-<?php get_header(); ?>
+<?php get_header('alt'); ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
 		<div class="post" id="post-<?php the_ID(); ?>">
 
 			<h2><?php the_title(); ?></h2>
-
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
 			<div class="entry">
 
@@ -24,6 +22,27 @@
 
 		<?php endwhile; endif; ?>
 
-<?php get_sidebar(); ?>
+</section><!-- END OF events-container -->
+
+	<script type="text/javascript">
+		
+		//Hides the left month nav button on the calendar page if the prev month val is empty
+
+		$(document).ready(function() {
+		   str = $('.tribe-events-nav-previous').text();
+		   if($.trim(str) === "") {
+		     $('.tribe-events-nav-previous').hide();
+		   }
+
+
+		   var currentHash = window.location.href;
+			 
+			 if (currentHash=="http://paragonkitchen.com/calendar/") {
+				   $('.month-view-calendar-btn').hide();
+			 }
+
+		});
+
+	</script>
 
 <?php get_footer(); ?>
